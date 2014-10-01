@@ -1,0 +1,8 @@
+= form_for @workout_session, html: { class: "form form-horizontal workout_session" } do |f|
+  .form-group
+    = f.label :workout_id, class: 'control-label'
+    .controls
+      = f.text_field :workout_id, class: 'form-control', required: true
+    = error_span(@workout_session[:workout_id])
+  = f.submit nil,class: 'btn btn-primary'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), workout_sessions_path, :class => 'btn btn-default'

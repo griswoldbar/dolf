@@ -1,5 +1,5 @@
 Given(/^(\d+) workouts exists$/) do |n|
-  n.to_i.times { FactoryGirl.create(:workout) }
+  @workouts = n.to_i.times.map { FactoryGirl.create(:workout) }
 end
 
 When(/^I try to create a new workout session$/) do
@@ -8,7 +8,9 @@ When(/^I try to create a new workout session$/) do
 end
 
 Then(/^I am given a choice of available workouts$/) do
-  pending # express the regexp above with the code you wish you had
+  @workouts.each do |workout|
+    expect(page).to have_content workout.name
+  end
 end
 
 Given(/^I create a workout session based on the workout: "(.*?)"$/) do |arg1|
