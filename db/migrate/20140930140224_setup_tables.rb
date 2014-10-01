@@ -16,7 +16,7 @@ class SetupTables < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :muscles_exercises do |t|
+    create_table :exercises_muscles, id: false do |t|
       t.integer :muscle_id, null: false
       t.integer :exercise_id, null: false
       t.timestamps

@@ -1,0 +1,53 @@
+zones:
+  - name: hips
+    muscles_attributes:
+      - name: gluteus maximus
+      - name: gluteus medius
+      - name: gluteus minimus
+      - name: adductors
+      - name: ilopsoas
+  - name: upper legs
+    muscles_attributes:
+      - name: hamstrings
+      - name: quadriceps
+  - name: lower legs
+    muscles_attributes:
+      - name: gastrocnemius
+      - name: soleus
+      - name: dorsi flexors
+  - name: lower back
+    muscles_attributes:
+      - name: erector spinae
+  - name: chest
+    muscles_attributes:
+      - name: lower chest
+      - name: upper chest
+  - name: upper back
+    muscles_attributes:
+      - name: lats
+  - name: shoulders
+    muscles_attributes:
+      - name: anterior deltoids
+      - name: middle deltoids
+      - name: posterior deltoids
+      - name: upper trapezius
+      - name: middle trapezius
+      - name: internal rotators
+      - name: external rotators
+  - name: upper arms
+    muscles_attributes:
+      - name: biceps
+      - name: triceps
+  - name: lower arms
+    muscles_attributes:
+      - name: wrist flexors
+      - name: wrist extensors
+      - name: finger flexors
+  - name: abdominals
+      - rectus abdominis
+      - obliques
+
+
+exercises:
+  - name: deadlift
+    muscle_names: ["gluteus maximus", "hamstrings", "quadriceps", "erector spinae"]

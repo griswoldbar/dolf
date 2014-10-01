@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+data = YAML.load_file("#{Rails.root}/db/seed_data.yml")
+
+Zone.create(data["zones"])
+Exercise.create(data["exercises"])
