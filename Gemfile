@@ -15,6 +15,7 @@ gem 'ruby-oci8', '~> 2.1.0'
 gem "activerecord-oracle_enhanced-adapter", "~> 1.5.0"
 
 gem "haml-rails"
+gem "twitter-bootstrap-rails"
 
 group :test do
   gem 'rspec-rails', '~> 3.0.0'
