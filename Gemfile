@@ -15,5 +15,13 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'ruby-oci8', '~> 2.1.0'
 gem "activerecord-oracle_enhanced-adapter", "~> 1.5.0"
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+group :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+end
+
+group :development, :test do
+  gem 'database_cleaner'
+  gem 'spring'
+  gem 'pry'
+end

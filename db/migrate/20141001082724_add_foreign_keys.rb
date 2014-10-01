@@ -3,9 +3,10 @@ class AddForeignKeys < ActiveRecord::Migration
     add_foreign_key :muscles, :zones, column: :zone_id
     add_foreign_key :exercises_muscles, :muscles, column: :muscle_id
     add_foreign_key :exercises_muscles, :exercises, column: :exercise_id
-    add_foreign_key :drills, :workouts, column: :workout_id
     add_foreign_key :drills, :exercises, column: :exercise_id
     add_foreign_key :workout_sessions, :workouts, column: :workout_id
+    add_foreign_key :drills_workouts, :workouts, column: :workout_id
+    add_foreign_key :drills_workouts, :drills, column: :drill_id
     add_foreign_key :drill_sessions, :workout_sessions, column: :workout_session_id
     add_foreign_key :drill_sessions, :drills, column: :drill_id
   end

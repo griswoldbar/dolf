@@ -28,10 +28,15 @@ class SetupTables < ActiveRecord::Migration
     end
 
     create_table :drills do |t|
-      t.integer :workout_id, null: false
       t.integer :exercise_id, null: false
       t.integer :max_reps
       t.integer :min_reps
+      t.timestamps
+    end
+
+    create_table :drills_workouts, id: false do |t|
+      t.integer :drill_id, null: false
+      t.integer :workout_id, null: false
       t.timestamps
     end
 

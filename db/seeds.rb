@@ -10,3 +10,4 @@ data = YAML.load_file("#{Rails.root}/db/seed_data.yml")
 
 Zone.create(data["zones"])
 Exercise.create(data["exercises"])
+WorkoutBuilder.new.build_set(data["workouts"])

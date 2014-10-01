@@ -5,7 +5,7 @@ zones:
       - name: gluteus medius
       - name: gluteus minimus
       - name: adductors
-      - name: ilopsoas
+      - name: iliopsoas
   - name: upper legs
     muscles_attributes:
       - name: hamstrings
@@ -44,10 +44,35 @@ zones:
       - name: wrist extensors
       - name: finger flexors
   - name: abdominals
-      - rectus abdominis
-      - obliques
-
+    muscles_attributes:
+      - name: rectus abdominis
+      - name: obliques
 
 exercises:
   - name: deadlift
     muscle_names: ["gluteus maximus", "hamstrings", "quadriceps", "erector spinae"]
+  - name: standing calf raise
+    muscle_names: ["gastrocnemius"]
+  - name: overhead press
+    muscle_names: ["anterior deltoids", "triceps"]
+
+workouts:
+  - name: "super workout"
+    drills_attributes:
+      - exercise_name: deadlift
+        min_reps: 20
+        max_reps: 20
+      - exercise_name: standing calf raise
+        min_reps: 20
+        max_reps: 20
+      - exercise_name: overhead press
+        min_reps: 12
+        max_reps: 15
+  - name: "crap workout"
+    drills_attributes:
+      - exercise_name: standing calf raise
+        min_reps: 20
+        max_reps: 20
+      - exercise_name: overhead press
+        min_reps: 10
+        max_reps: 20
