@@ -21,6 +21,7 @@ group :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'cucumber-rails', :require => false
   gem 'factory_girl_rails'
+  gem 'launchy'
 end
 
 group :development, :test do
