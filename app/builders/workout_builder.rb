@@ -12,7 +12,6 @@ class WorkoutBuilder
 
   private
   def fetch_or_build_drill(attributes)
-    # require 'pry'; binding.pry
     attributes.symbolize_keys!
     exercise_name = attributes[:exercise_name]
     max_reps = attributes[:max_reps]
