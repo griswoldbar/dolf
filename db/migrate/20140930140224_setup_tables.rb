@@ -7,7 +7,7 @@ class SetupTables < ActiveRecord::Migration
 
     create_table :muscles do |t|
       t.string :name
-      t.integer :zone_id
+      t.integer :zone_id, null: false
       t.timestamps
     end
 
@@ -17,8 +17,8 @@ class SetupTables < ActiveRecord::Migration
     end
 
     create_table :muscles_exercises do |t|
-      t.integer :muscle_id
-      t.integer :exercise_id
+      t.integer :muscle_id, null: false
+      t.integer :exercise_id, null: false
       t.timestamps
     end
 
@@ -28,21 +28,21 @@ class SetupTables < ActiveRecord::Migration
     end
 
     create_table :drills do |t|
-      t.integer :workout_id
-      t.integer :exercise_id
+      t.integer :workout_id, null: false
+      t.integer :exercise_id, null: false
       t.integer :max_reps
       t.integer :min_reps
       t.timestamps
     end
 
     create_table :workout_sessions do |t|
-      t.integer :workout_id
+      t.integer :workout_id, null: false
       t.timestamps
     end
 
     create_table :drill_sessions do |t|
-      t.integer :workout_session_id
-      t.integer :drill_id
+      t.integer :workout_session_id, null: false
+      t.integer :drill_id, null: false
       t.integer :weight
       t.integer :reps
       t.timestamps
