@@ -18,7 +18,7 @@ gem "haml-rails"
 gem "twitter-bootstrap-rails"
 
 group :test do
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
   gem 'factory_girl_rails'
   gem 'launchy'

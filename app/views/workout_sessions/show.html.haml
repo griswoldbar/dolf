@@ -7,6 +7,7 @@
   %br
   = @workout_session.workout_id
 
+= render 'drill_sessions'
 
 = link_to t('.back', :default => t("helpers.links.back")), workout_sessions_path, :class => 'btn btn-default'
 = link_to t('.edit', :default => t("helpers.links.edit")), edit_workout_session_path(@workout_session), :class => 'btn btn-default'

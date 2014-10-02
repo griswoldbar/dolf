@@ -3,6 +3,10 @@ class Exercise < ActiveRecord::Base
   has_many :drills
   validates :name, uniqueness: true, presence: true
 
+  def muscles_list
+    muscles.pluck(:name).join(", ")
+  end
+
   def muscle_names=(names)
     names.each do |name|
       self.muscles << Muscle.find_by_name(name)

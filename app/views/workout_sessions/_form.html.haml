@@ -2,7 +2,7 @@
   .form-group
     = f.label :workout_id, class: 'control-label'
     .controls
-      = f.text_field :workout_id, class: 'form-control', required: true
+      = f.collection_select(:workout_id, @workouts, :id, :name, prompt: true)
     = error_span(@workout_session[:workout_id])
   = f.submit nil,class: 'btn btn-primary'
   = link_to t('.cancel', :default => t("helpers.links.cancel")), workout_sessions_path, :class => 'btn btn-default'

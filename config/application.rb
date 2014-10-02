@@ -21,8 +21,10 @@ module Dolf
     # config.i18n.default_locale = :de
     config.autoload_paths += [
       "#{config.root}/app/**",
-      "#{config.root}/lib/**",
+      "#{config.root}/lib",
     ]
+    config.autoload_paths << Rails.root.join('lib')
+
 
     config.active_record.schema_format = :sql
   end

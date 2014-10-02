@@ -1,0 +1,14 @@
+default: &default
+  starting_weight: 10
+
+development:
+  <<: *default
+
+test: &test
+  <<: *default
+
+production:
+  <<: *default
+
+cucumber:
+  <<: *test

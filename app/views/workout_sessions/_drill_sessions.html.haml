@@ -1,0 +1,11 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th exercise
+      %th min reps
+      %th max reps
+      %th muscles
+      %th target reps
+      %th target weight
+  %tbody
+    = render partial: "drill_sessions/drill_session", collection: @drill_sessions
