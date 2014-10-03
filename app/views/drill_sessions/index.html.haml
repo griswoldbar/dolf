@@ -1,0 +1,27 @@
+- model_class = DrillSession
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:workout_session_id)
+      %th= model_class.human_attribute_name(:drill_id)
+      %th= model_class.human_attribute_name(:weight)
+      %th= model_class.human_attribute_name(:reps)
+      %th= model_class.human_attribute_name(:created_at)
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @drill_sessions.each do |drill_session|
+      %tr
+        %td= link_to drill_session.id, drill_session_path(drill_session)
+        %td= drill_session.workout_session_id
+        %td= drill_session.drill_id
+        %td= drill_session.weight
+        %td= drill_session.reps
+        %td=l drill_session.created_at
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_drill_session_path(drill_session), :class => 'btn btn-default btn-xs'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), drill_session_path(drill_session), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
+
+= link_to t('.new', :default => t("helpers.links.new")), new_drill_session_path, :class => 'btn btn-primary'

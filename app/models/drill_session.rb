@@ -3,6 +3,12 @@ class DrillSession < ActiveRecord::Base
   belongs_to :drill
   delegate :name, :min_reps, :max_reps, :muscles_list, :exercise, to: :drill
   scope :complete, -> { where('weight is not null') }
+  scope :next_drill_session, ->(ds) { joins('inner join drills on drills.id = drill_sessions.drill_id').where(workout_session_id: ds.workout_session_id).where('drills.position = ?', ds.position + 1)
+  }
+
+  def position
+    drill.position
+  end
 
   def target_reps
     target_calculator.reps

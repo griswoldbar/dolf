@@ -1,6 +1,6 @@
 class Exercise < ActiveRecord::Base
   has_and_belongs_to_many :muscles
-  has_many :drills
+  has_many :drills, dependent: :destroy
   validates :name, uniqueness: true, presence: true
 
   def muscles_list

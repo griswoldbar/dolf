@@ -1,0 +1,6 @@
+- model_class = DrillSession
+.page-header
+  %h1="Drill #{@drill_session.position + 1}: #{@drill_session.exercise.name}"
+  %h3="Weight: #{weight_in_kg(@drill_session.target_weight)}"
+  %h3="Reps Target: #{@drill_session.target_reps}"
+= render :partial => "form"

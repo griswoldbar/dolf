@@ -1,0 +1,12 @@
+= form_for @drill_session, html: { class: "form form-horizontal drill_session" } do |f|
+  .form-group
+    = f.label :weight, class: 'control-label'
+    .controls
+      = f.text_field :weight, class: 'form-control', value: @drill_session.target_weight, required: true
+    = error_span(@drill_session[:weight])
+  .form-group
+    = f.label :reps, class: 'control-label'
+    .controls
+      = f.text_field :reps, class: 'form-control',  value: @drill_session.target_reps, required: true
+    = error_span(@drill_session[:reps])
+  = f.submit button_text,class: 'btn btn-primary'

@@ -16,7 +16,8 @@ class WorkoutBuilder
     exercise_name = attributes[:exercise_name]
     max_reps = attributes[:max_reps]
     min_reps = attributes[:min_reps]
+    position = attributes[:position]
     exercise_id = Exercise.find_by_name(exercise_name).id
-    Drill.find_or_create_by(max_reps: max_reps, min_reps: min_reps, exercise_id: exercise_id)
+    Drill.find_or_create_by(max_reps: max_reps, min_reps: min_reps, exercise_id: exercise_id, position: position)
   end
 end

@@ -1,7 +1,6 @@
 %tr
   %td= drill_session.name
-  %td= drill_session.min_reps
-  %td= drill_session.max_reps
+  %td= "#{drill_session.min_reps} - #{drill_session.max_reps}"
   %td= drill_session.muscles_list
-  %td= drill_session.target_reps
-  %td= drill_session.target_weight
+  %td= "#{drill_session.reps} / #{drill_session.target_reps}"
+  %td= "#{drill_session.weight} / #{drill_session.target_weight}"

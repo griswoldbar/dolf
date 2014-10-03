@@ -31,6 +31,7 @@ class SetupTables < ActiveRecord::Migration
       t.integer :exercise_id, null: false
       t.integer :max_reps
       t.integer :min_reps
+      t.integer :position
       t.timestamps
     end
 
