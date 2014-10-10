@@ -29,15 +29,10 @@ class SetupTables < ActiveRecord::Migration
 
     create_table :drills do |t|
       t.integer :exercise_id, null: false
+      t.integer :workout_id, null: false
       t.integer :max_reps
       t.integer :min_reps
       t.integer :position
-      t.timestamps
-    end
-
-    create_table :drills_workouts, id: false do |t|
-      t.integer :drill_id, null: false
-      t.integer :workout_id, null: false
       t.timestamps
     end
 
@@ -49,7 +44,7 @@ class SetupTables < ActiveRecord::Migration
     create_table :drill_sessions do |t|
       t.integer :workout_session_id, null: false
       t.integer :drill_id, null: false
-      t.integer :weight
+      t.decimal :weight
       t.integer :reps
       t.timestamps
     end

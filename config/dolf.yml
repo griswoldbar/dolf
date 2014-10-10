@@ -1,6 +1,6 @@
 default: &default
-  starting_weight: 5000
-  increment: 2500
+  starting_weight: 5
+  weight_increment: 2.5
 
 development:
   <<: *default

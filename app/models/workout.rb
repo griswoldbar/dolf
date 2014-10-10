@@ -1,6 +1,11 @@
 class Workout < ActiveRecord::Base
-  has_and_belongs_to_many :drills
+  has_many :drills
   has_many :workout_sessions, dependent: :destroy
 
-  accepts_nested_attributes_for :drills
+  #rails' nested attributes doesn't seem to work with 'sequential' gem
+  def drills_attributes=(collection)
+    collection.each do |attrs|
+      Drill.create(attrs.merge(workout: self))
+    end
+  end
 end

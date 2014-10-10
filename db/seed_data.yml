@@ -61,23 +61,18 @@ workouts:
     drills_attributes:
       - exercise_name: deadlift
         min_reps: 20
-        max_reps: 20
-        position: 0
+        max_reps: 25
       - exercise_name: standing calf raise
         min_reps: 20
-        max_reps: 20
-        position: 1
+        max_reps: 25
       - exercise_name: overhead press
         min_reps: 12
         max_reps: 15
-        position: 2
   - name: "crap workout"
     drills_attributes:
       - exercise_name: standing calf raise
         min_reps: 20
-        max_reps: 20
-        position: 0
+        max_reps: 25
       - exercise_name: overhead press
         min_reps: 10
         max_reps: 20
-        position: 1
