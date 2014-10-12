@@ -16,4 +16,8 @@ class WorkoutSessionsController < ApplicationController
     @drill_sessions = DrillSession.where(workout_session: @workout_session).includes(:drill)
     @workout = @workout_session.workout
   end
+
+  def index
+    @workout_sessions = WorkoutSession.all
+  end
 end

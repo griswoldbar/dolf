@@ -8,9 +8,12 @@ class Exercise < ActiveRecord::Base
   end
 
   def muscle_names=(names)
+    if names.is_a?(String)
+      names = names.split(",")
+    end
+
     names.each do |name|
       self.muscles << Muscle.find_by_name(name)
     end
   end
-
 end

@@ -1,12 +1,12 @@
-- model_class = WorkoutSession
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+  %h1 Workout Sessions
 %table.table.table-striped
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:workout_id)
-      %th= model_class.human_attribute_name(:created_at)
+      %th= "Workout"
+      %th= "Date"
+      %th= "Absolute Score"
+      %th= "Relative Score"
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     = render @workout_sessions

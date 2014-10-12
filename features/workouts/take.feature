@@ -30,3 +30,8 @@ Feature: Do a workout
     And I complete the workout
       Then I should see my results
       And I should not be able to start the workout again
+
+  Scenario: User takes a workout from the workouts page
+    Given I am on the home page
+    And I navigate to the workouts page
+

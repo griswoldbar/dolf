@@ -9,4 +9,12 @@ class WorkoutSession < ActiveRecord::Base
   def complete?
     drill_sessions.all?(&:complete?)
   end
+
+  def relative_score
+    0
+  end
+
+  def absolute_score
+    0
+  end
 end

@@ -58,7 +58,7 @@ Then(/^I should see the first drill$/) do
   expect(page).to have_content(@current_drill_session.exercise.name)
 end
 
-When(/^I fill in my results with weight: (\d+), reps: (\d+)$/) do |weight, reps|
+When(/^I fill in my results with weight: (\d+.?\d?), reps: (\d+)$/) do |weight, reps|
   fill_in 'drill_session[weight]', with: weight
   fill_in 'drill_session[reps]', with: reps
   @expected_results ||= []
@@ -119,3 +119,14 @@ Then(/^the target reps should be (\d+)$/) do |target_reps|
   expect(page).to have_content("Reps Target: #{target_reps}")
 end
 
+Given(/^I take the #{capture_model} and achieve:$/) do |workout, table|
+  step %Q{I take the #{workout}}
+  table.hashes.each do |result|
+    step %Q{I fill in my results with weight: #{result[:weight]}, reps: #{result[:reps]}}
+    step %Q{I ask for the next drill}
+  end
+end
+
+When(/^I go to my workouts$/) do
+  click_link("My Workouts")
+end
