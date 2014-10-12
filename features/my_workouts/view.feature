@@ -30,7 +30,7 @@ Feature: View my past workouts
     | drill-3 | 5      | 8    |
     When I go to my workouts
       Then I should see the following table:
-      | workout    | relative score | absolute score |
-      | the killer | 0              | 19             |
-      | the horror | 0              | 16             |
-      | the killer | 6              | 25             |
+      | Workout    | Absolute Score | Relative Score |
+      | the killer | 95.0           | 0              |
+      | the horror | 80.0           | 0              |
+      | the killer | 130.0          | 35.0           |

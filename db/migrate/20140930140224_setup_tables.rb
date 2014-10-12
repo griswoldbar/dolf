@@ -44,7 +44,7 @@ class SetupTables < ActiveRecord::Migration
     create_table :drill_sessions do |t|
       t.integer :workout_session_id, null: false
       t.integer :drill_id, null: false
-      t.decimal :weight
+      t.decimal :weight, precision: 5, scale: 2
       t.integer :reps
       t.timestamps
     end
