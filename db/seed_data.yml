@@ -40,6 +40,7 @@ zones:
       - name: triceps
   - name: lower arms
     muscles_attributes:
+      - name: forearms
       - name: wrist flexors
       - name: wrist extensors
       - name: finger flexors
@@ -55,24 +56,69 @@ exercises:
     muscle_names: ["gastrocnemius"]
   - name: overhead press
     muscle_names: ["anterior deltoids", "triceps"]
+  - name: step-up
+    muscle_names: ["gluteus maximus", "hamstrings", "quadriceps"]
+  - name: bent-over row
+    muscle_names: ["lats", "biceps", "forearms"]
+  - name: supine press
+    muscle_names: ["lower chest", "upper chest", "anterior deltoids", "triceps"]
+  - name: shrug
+    muscle_names: ["upper trapezius"]
+  - name: bicep curl
+    muscle_names: ["biceps", "forearms"]
+  - name: bent-over raise
+    muscle_names: ["posterior deltoids", "middle trapezius"]
+  - name: external rotation
+    muscle_names: ["external rotators"]
+  - name: stiff-leg deadlift
+    muscle_names: ["erector spinae", "gluteus maximus", "hamstrings"]
+  - name: crunch
+    muscle_names: ["rectus abdominis", "iliopsoas"]
+  - name: wrist flexion
+    muscle_names: ["wrist flexors"]
+  - name: wrist extension
+    muscle_names: ["wrist extensors"]
+
 
 workouts:
-  - name: "super workout"
+  - name: "first workout"
     drills_attributes:
-      - exercise_name: deadlift
-        min_reps: 20
-        max_reps: 25
+      - exercise_name: step-up
+        min_reps: 15
+        max_reps: 20
       - exercise_name: standing calf raise
         min_reps: 20
         max_reps: 25
       - exercise_name: overhead press
         min_reps: 12
         max_reps: 15
-  - name: "crap workout"
-    drills_attributes:
-      - exercise_name: standing calf raise
+      - exercise_name: bent-over row
+        min_reps: 12
+        max_reps: 15
+      - exercise_name: supine press
+        min_reps: 12
+        max_reps: 15
+      - exercise_name: shrug
         min_reps: 20
         max_reps: 25
-      - exercise_name: overhead press
-        min_reps: 10
-        max_reps: 20
+      - exercise_name: bicep curl
+        min_reps: 12
+        max_reps: 15
+      - exercise_name: bent-over raise
+        min_reps: 12
+        max_reps: 15
+      - exercise_name: external rotation
+        min_reps: 20
+        max_reps: 25
+      - exercise_name: stiff-leg deadlift
+        min_reps: 20
+        max_reps: 25
+      - exercise_name: crunch
+        min_reps: 20
+        max_reps: 25
+      - exercise_name: wrist flexion
+        min_reps: 20
+        max_reps: 25
+      - exercise_name: wrist extension
+        min_reps: 20
+        max_reps: 25

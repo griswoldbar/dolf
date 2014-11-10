@@ -4,3 +4,17 @@
   %h3="Weight: #{weight_in_kg(@drill_session.target_weight)}"
   %h3="Reps Target: #{@drill_session.target_reps}"
 = render :partial => "form"
+
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Date
+      %th Weight
+      %th Reps
+  %tbody
+    - @siblings.each do |sibling|
+      %tr
+        %td= sibling.created_at
+        %td= sibling.weight
+        %td= sibling.reps

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :workout_sessions
   resources :workouts
   resources :drill_sessions, only: [:edit, :update]
+  get "stats/absolute_scores" => 'stats#absolute_scores'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -10,3 +10,20 @@
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     = render @workout_sessions
+#plop
+
+:javascript
+  $(document).ready(function() {
+    var options = {
+      chart: {
+        renderTo: 'plop',
+        type: 'spline'
+      },
+      series: [{}]
+    };
+
+    $.getJSON("#{stats_absolute_scores_path}.json", function(data) {
+      options.series[0].data = data;
+      var chart = new Highcharts.Chart(options);
+    });
+  });

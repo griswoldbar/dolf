@@ -13,6 +13,7 @@ test: &test
   password: password
 
 production:
+  <<: *default
   username: dolf_production
   password: password
 

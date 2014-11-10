@@ -13,7 +13,11 @@ class Exercise < ActiveRecord::Base
     end
 
     names.each do |name|
-      self.muscles << Muscle.find_by_name(name)
+      begin
+        self.muscles << Muscle.find_by_name(name.strip)
+      rescue StandardError
+        raise "no such muscle: #{name}"
+      end
     end
   end
 end

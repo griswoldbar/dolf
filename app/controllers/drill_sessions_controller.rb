@@ -2,6 +2,7 @@ class DrillSessionsController < ApplicationController
 
   def edit
     @drill_session = drill_sessions.find(params[:id])
+    @siblings ||= (DrillSession.where(drill: @drill_session.drill) || [])
   end
 
   def update
@@ -11,6 +12,7 @@ class DrillSessionsController < ApplicationController
   end
 
   private
+
   def drill_sessions
     DrillSession.includes(drill: :exercise)
   end

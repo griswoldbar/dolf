@@ -18,7 +18,7 @@ gem "therubyracer"
 gem "haml-rails"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
-
+gem "highcharts-rails"
 gem "sequenced"
 
 group :test do
